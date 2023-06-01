@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+ <meta charset="UTF-8" />
+ <title>Minimal Plain JS App</title>
+ <script src="assignment5/m/Movie.mjs" type="module"></script>
+ <script type="module">
+  import Movie from "./assignment5/m/Movie.mjs";
+
+  const clearButton = document.getElementById("clearData"),
+          generateTestDataButtons = document.querySelectorAll("button.generateTestData");
+  // Set event handlers for the buttons "clearData" and "generateTestData"
+  clearButton.addEventListener("click", function () {
+   Movie.clearData();
+  });
+  generateTestDataButtons.forEach(function (el) {
+   el.addEventListener("click", function () {
+    Movie.generateTestData();
+   })
+  });
+ </script>
+</head>
+<body>
+<h1>Movies</h1>
+<h2>Movie App</h2>
+<figure style="float:right">
+ <a href="https://web-engineering.info">
+  <img property="thumbnailUrl" title="Icon made by Lorc under CC BY 3.0. Available on https://game-icons.net"
+       src="machine-build.svg" width="120"  alt=""/></a>
+</figure>
+<menu>
+ <li><a href="createMovie.html"><button type="button">Create</button></a> a new movie record</li>
+ <li><a href="retrieveAndListAllMovies.html"><button type="button">Retrieve</button></a> and list all movie records</li>
+ <li><a href="updateMovie.html"><button type="button">Update</button></a> a movie record</li>
+ <li><a href="deleteMovie.html"><button type="button">Delete</button></a> a movie record</li>
+ <li><a href="personManager.html"><button type="button">Manage Persons</button></a> persons overview</li>
+ <hr/>
+ <li> <button type="button" id="clearData">Clear database</button></li>
+ <li>               <button type="button" class="generateTestData">Generate test data</button></li>
+</menu>
+<footer style="font-size: small;">
+ <hr />
+</footer>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Person and Movie CRUD</title>
+  <script src="assignment5/v/personManager.js" type="module"></script>
+</head>
+<body>
+<h1>Person and Movie CRUD</h1>
+<div id="personForm">
+  <div id="movieSelector">
+    <select id="movieDropdown">
+      <!-- Optionen werden durch JavaScript hinzugefügt -->
+    </select>
+    <button id="selectMovie">Film auswählen</button>
+  </div>
+  <h2>Person</h2>
+  <label for="personSelect">Select Person:</label>
+  <select id="personSelect"></select>
+  <label for="personId">ID:</label>
+  <input type="number" id="personId">
+  <label for="personName">Name:</label>
+  <input type="text" id="personName">
+  <button id="createPersonButton">Create</button>
+  <button id="updatePersonButton">Update</button>
+  <button id="deletePersonButton">Delete</button>
+  <button id="addTestDataButton">Add Test Data</button>
+</div>
+<ul id="personList"></ul>
+<div id="output"></div>
+</body>
+</html>
