@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Actor and Movie CRUD</title>
+  <script src="assignment6/v/manageActor.js" type="module"></script>
+</head>
+<body>
+<h1>Actor and Movie CRUD</h1>
+<div id="actorForm">
+  <div id="movieSelector">
+    <select id="movieDropdown">
+      <!-- Optionen werden durch JavaScript hinzugefügt -->
+    </select>
+    <button id="selectMovie">Film auswählen</button>
+  </div>
+  <h2>Actor</h2>
+  <label for="actorSelect">Select Actor:</label>
+  <select id="actorSelect"></select>
+  <label for="actorId">ID:</label>
+  <input type="number" id="actorId">
+  <label for="actorName">Name:</label>
+  <input type="text" id="actorName">
+  <button id="createActorButton">Create</button>
+  <button id="updateActorButton">Update</button>
+  <button id="deleteActorButton">Delete</button>
+  <button id="addTestDataButton">Add Test Data</button>
+  <button id="deleteAllActorsButton">Delete All Actors</button>
+
+</div>
+<ul id="actorList"></ul>
+<div id="output"></div>
+</body>
+</html>
